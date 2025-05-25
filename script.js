@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hair: [
             { name: 'なし', src: null }, // 髪なし
             { name: 'ショートヘア (黒)', src: 'images/hair/hair_short_black.png' },
-            { name: 'ツインテール (金)', src: 'images/hair/hair_twin_gold.png' },
+            { name: 'うなヘアー', src: 'images/hair/image2.png' },
             // { name: 'アフロ (茶)', src: 'images/hair/hair_afro_brown.png' },
         ],
         eyes: [
