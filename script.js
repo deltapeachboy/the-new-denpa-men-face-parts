@@ -3,18 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = canvas.getContext('2d');
 
     // --- パーツデータの定義 ---
-    // 'images/' フォルダ以下に、対応する名前で画像ファイルを用意してください。
-    // src: null の場合は「なし」として扱われ、何も描画しません。
-    // name: セレクトボックスに表示される名前
-    // 【重要】各パーツ画像の原点とサイズを統一し、
-    //         300x300のキャンバスに描画した際に正しい位置に来るように作成してください。
     const parts = {
         body: [ // ボディパーツは以前のサンプルのままです。必要に応じて画像を用意し、パスを修正してください。
             { name: '標準体型', src: 'images/body/body_01.png' },
             { name: 'がっしり体型', src: 'images/body/body_02.png' },
         ],
-        hair: [
-            { name: 'なし', src: null }, // 髪なし
+        hair: [ // 髪型パーツ (image1.png - image60.png)
+            { name: 'なし', src: null },
             { name: '羊ツノ (金)', src: 'images/hair/image1.png' },
             { name: 'おさげ (金)', src: 'images/hair/image2.png' },
             { name: 'シンプル縦長 (茶)', src: 'images/hair/image3.png' },
@@ -76,9 +71,74 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: 'ショート (緑)', src: 'images/hair/image59.png' },
             { name: 'お椀型 (青)', src: 'images/hair/image60.png' }
         ],
-        eyes: [ // 目パーツも以前のサンプルのままです。必要に応じて画像を用意し、パスを修正してください。
-            { name: 'ぱっちり目 (青)', src: 'images/eyes/eyes_normal_blue.png' },
-            { name: 'ジト目 (緑)', src: 'images/eyes/eyes_jito_green.png' },
+        eyes: [ // 目パーツ (image1.png - image67.png)
+            { name: 'つり目 (黒豆風)', src: 'images/eyes/image1.png' },
+            { name: '動物風の目 (大)', src: 'images/eyes/image2.png' },
+            { name: 'シンプル縦長楕円', src: 'images/eyes/image3.png' },
+            { name: '横長サングラス風', src: 'images/eyes/image4.png' },
+            { name: 'くっきり丸目', src: 'images/eyes/image5.png' },
+            { name: 'しずく型光沢目', src: 'images/eyes/image6.png' },
+            { name: '大ハイライト丸目', src: 'images/eyes/image7.png' },
+            { name: '盾型目', src: 'images/eyes/image8.png' },
+            { name: '洋梨型目', src: 'images/eyes/image9.png' },
+            { name: '黒目大ハイライト丸目', src: 'images/eyes/image10.png' },
+            { name: '斜め細長棒状目', src: 'images/eyes/image11.png' },
+            { name: '半月大ハイライト目', src: 'images/eyes/image12.png' },
+            { name: '横一直線細目', src: 'images/eyes/image13.png' },
+            { name: '下弦月ハイライト半月目', src: 'images/eyes/image14.png' },
+            { name: '猫耳風丸目', src: 'images/eyes/image15.png' },
+            { name: 'アーチ型太ハイライト目', src: 'images/eyes/image16.png' },
+            { name: '大瞳孔まぶた目', src: 'images/eyes/image17.png' },
+            { name: '鋭い切れ長目', src: 'images/eyes/image18.png' },
+            { name: '白縁丸目', src: 'images/eyes/image19.png' },
+            { name: 'シンプル楕円目', src: 'images/eyes/image20.png' },
+            { name: '不定形生物風目', src: 'images/eyes/image21.png' },
+            { name: 'T字型目', src: 'images/eyes/image22.png' },
+            { name: '大ハイライト丸目2', src: 'images/eyes/image23.png' },
+            { name: 'くっきり人間風目', src: 'images/eyes/image24.png' },
+            { name: '三日月型目', src: 'images/eyes/image25.png' },
+            { name: '半円シンプル目', src: 'images/eyes/image26.png' },
+            { name: '鋭い三角目', src: 'images/eyes/image27.png' },
+            { name: 'シンプル三角目', src: 'images/eyes/image28.png' },
+            { name: '小四角ハイライトT字目', src: 'images/eyes/image29.png' },
+            { name: '縦長0型目', src: 'images/eyes/image30.png' },
+            { name: 'まつげ特徴丸目', src: 'images/eyes/image31.png' },
+            { name: '大丸目 (3つ組？)', src: 'images/eyes/image32.png' },
+            { name: '垂れ不定形目', src: 'images/eyes/image33.png' },
+            { name: '太リング丸目', src: 'images/eyes/image34.png' },
+            { name: '三本指風目', src: 'images/eyes/image35.png' },
+            { name: '逆三角目', src: 'images/eyes/image36.png' },
+            { name: '下弦月ハイライト丸目2', src: 'images/eyes/image37.png' },
+            { name: '横大三日月ハイライト目', src: 'images/eyes/image38.png' },
+            { name: 'にっこり笑顔目', src: 'images/eyes/image39.png' },
+            { name: '横長楕円小ハイライト目', src: 'images/eyes/image40.png' },
+            { name: '縦長猫目', src: 'images/eyes/image41.png' },
+            { name: '縦長シンプル楕円目2', src: 'images/eyes/image42.png' },
+            { name: '音符型目', src: 'images/eyes/image43.png' },
+            { name: '横突起丸目', src: 'images/eyes/image44.png' },
+            { name: 'ピクセルサングラス風', src: 'images/eyes/image45.png' },
+            { name: '小下弦月ハイライト半月目', src: 'images/eyes/image46.png' },
+            { name: '細長楕円目 (暗)', src: 'images/eyes/image47.png' },
+            { name: '細長斜め目', src: 'images/eyes/image48.png' },
+            { name: '細長三日月目', src: 'images/eyes/image49.png' },
+            { name: '十字ハイライトトゲトゲ目', src: 'images/eyes/image50.png' },
+            { name: '長方形二連目', src: 'images/eyes/image51.png' },
+            { name: '横くるん丸目', src: 'images/eyes/image52.png' },
+            { name: '横突起下弦月ハイライト丸目', src: 'images/eyes/image53.png' },
+            { name: '紫瞳まつげ目', src: 'images/eyes/image54.png' },
+            { name: 'ピースサイン風目', src: 'images/eyes/image55.png' },
+            { name: '鋭い切れ長目2', src: 'images/eyes/image56.png' },
+            { name: '青み丸目', src: 'images/eyes/image57.png' },
+            { name: '半円大ハイライト目', src: 'images/eyes/image58.png' },
+            { name: '鋭いジト目', src: 'images/eyes/image59.png' },
+            { name: '飛び出し目玉風', src: 'images/eyes/image60.png' },
+            { name: '横長シンプル楕円目2', src: 'images/eyes/image61.png' },
+            { name: '縦二連ハイライト楕円目', src: 'images/eyes/image62.png' },
+            { name: '三日月ハイライト丸目2', src: 'images/eyes/image63.png' },
+            { name: '暗い楕円目2', src: 'images/eyes/image64.png' },
+            { name: '暗い縦長楕円目2', src: 'images/eyes/image65.png' },
+            { name: 'リング垂れ目', src: 'images/eyes/image66.png' },
+            { name: '音符棒型目', src: 'images/eyes/image67.png' }
         ],
         mouth: [ // 口パーツも以前のサンプルのままです。必要に応じて画像を用意し、パスを修正してください。
             { name: '普通の口', src: 'images/mouth/mouth_normal.png' },
@@ -100,15 +160,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let imagesLoaded = 0;
 
     // --- 描画順序 ---
-    // この順番でパーツが描画されます。下にあるものが手前に来ます。
     const drawOrder = ['body', 'hair', 'eyes', 'mouth', 'antenna'];
 
     // --- 画像プリロード関数 ---
     function preloadImages(onComplete) {
+        imagesToLoad = 0; // リセット
+        imagesLoaded = 0; // リセット
         for (const category of drawOrder) {
             if (parts[category]) {
                 parts[category].forEach(part => {
-                    if (part.src) { // srcがnullでない（画像がある）場合のみ
+                    if (part.src) {
                         imagesToLoad++;
                     }
                 });
@@ -116,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (imagesToLoad === 0) {
-            onComplete(); // 読み込む画像がない場合
+            onComplete();
             return;
         }
 
@@ -124,38 +185,53 @@ document.addEventListener('DOMContentLoaded', () => {
             if (parts[category]) {
                 parts[category].forEach(part => {
                     if (part.src) {
-                        const img = new Image();
-                        img.src = part.src;
-                        imageCache[part.src] = img;
-                        img.onload = () => {
+                        if (!imageCache[part.src]) { // まだキャッシュされていなければ
+                            const img = new Image();
+                            img.src = part.src;
+                            imageCache[part.src] = img; // 先にキャッシュオブジェクトに入れる
+                            img.onload = () => {
+                                imagesLoaded++;
+                                if (imagesLoaded === imagesToLoad) {
+                                    onComplete();
+                                }
+                            };
+                            img.onerror = () => {
+                                console.error(`画像の読み込みに失敗しました: ${part.src}`);
+                                imagesLoaded++;
+                                if (imagesLoaded === imagesToLoad) {
+                                    onComplete();
+                                }
+                            };
+                        } else if (imageCache[part.src].complete) { // すでにキャッシュ済みで読み込み完了
                             imagesLoaded++;
-                            if (imagesLoaded === imagesToLoad) {
-                                onComplete(); // 全ての画像が読み込まれたらコールバックを実行
-                            }
-                        };
-                        img.onerror = () => {
-                            console.error(`画像の読み込みに失敗しました: ${part.src}`);
-                            imagesLoaded++; // エラーでもカウントは進める
-                            if (imagesLoaded === imagesToLoad) {
+                             if (imagesLoaded === imagesToLoad) {
                                 onComplete();
                             }
-                        };
+                        } else { // キャッシュオブジェクトはあるが、まだ読み込み中 (img.onloadがまだ発火してない)
+                            // このケースは通常、最初のpreloadImages呼び出しで処理される
+                            // もし再度preloadImagesが呼ばれた場合、onload/onerrorが処理する
+                        }
                     }
                 });
             }
+        }
+         // もしsrc:nullだけのカテゴリなど、読み込むべき画像がないのに呼ばれた場合、
+         // imagesToLoadが0のままなので、即座にonCompleteが呼ばれる。
+         // もし、全てのpart.srcがキャッシュ済みだった場合、imagesLoadedが即座にimagesToLoadに達する
+         if (imagesLoaded === imagesToLoad && imagesToLoad > 0) { // 全てキャッシュ済みだった場合
+            onComplete();
         }
     }
 
     // --- 顔描画関数 ---
     function drawFace() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height); // Canvasをクリア
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         drawOrder.forEach(category => {
             const selectedPartIndex = currentSelection[category];
             if (parts[category] && parts[category][selectedPartIndex]) {
                 const partData = parts[category][selectedPartIndex];
                 if (partData.src && imageCache[partData.src] && imageCache[partData.src].complete) {
-                    // 画像がキャッシュにあり、読み込み完了していれば描画
                     ctx.drawImage(imageCache[partData.src], 0, 0, canvas.width, canvas.height);
                 }
             }
@@ -167,6 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
         drawOrder.forEach(category => {
             const selectElement = document.getElementById(`${category}-select`);
             if (selectElement && parts[category]) {
+                // 既存のoptionをクリア
+                selectElement.innerHTML = '';
                 parts[category].forEach((part, index) => {
                     const option = document.createElement('option');
                     option.value = index;
@@ -174,7 +252,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     selectElement.appendChild(option);
                 });
 
-                // 初期選択を設定 (最初のパーツを選択)
                 currentSelection[category] = 0;
                 selectElement.value = 0;
 
@@ -187,7 +264,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // ランダムボタンのイベントリスナー
         const randomButton = document.getElementById('random-button');
         if (randomButton) {
             randomButton.addEventListener('click', () => {
@@ -207,9 +283,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 初期化処理の実行 ---
-    initUI(); // UIのセットアップ
-    preloadImages(() => { // 画像のプリロード
+    initUI();
+    preloadImages(() => {
         console.log("全ての画像のプリロード試行完了");
-        drawFace(); // プリロード後に最初の顔を描画
+        drawFace();
     });
 });
