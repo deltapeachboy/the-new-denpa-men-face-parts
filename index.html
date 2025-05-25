@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電波人間 顔シミュレーター</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>電波人間 顔シミュレーター</h1>
+
+    <div class="simulator-container">
+        <div class="controls">
+            <h2>パーツ選択</h2>
+            <div class="selector-group">
+                <label for="body-select">輪郭 (体):</label>
+                <select id="body-select"></select>
+            </div>
+            <div class="selector-group">
+                <label for="hair-select">髪型:</label>
+                <select id="hair-select"></select>
+            </div>
+            <div class="selector-group">
+                <label for="eyes-select">目:</label>
+                <select id="eyes-select"></select>
+            </div>
+            <!-- 鼻パーツを追加する場合
+            <div class="selector-group">
+                <label for="nose-select">鼻:</label>
+                <select id="nose-select"></select>
+            </div>
+            -->
+            <div class="selector-group">
+                <label for="mouth-select">口:</label>
+                <select id="mouth-select"></select>
+            </div>
+            <div class="selector-group">
+                <label for="antenna-select">アンテナ:</label>
+                <select id="antenna-select"></select>
+            </div>
+            <!-- 他のパーツ（アクセサリーなど）も同様に追加できます -->
+
+            <button id="random-button">ランダム生成！</button>
+        </div>
+
+        <div class="preview-area">
+            <h2>プレビュー</h2>
+            <canvas id="faceCanvas" width="300" height="300"></canvas>
+            <p class="image-note">パーツ画像は背景透明PNGで、300x300pxのキャンバス上の正しい位置に配置されている想定です。</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
