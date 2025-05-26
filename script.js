@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         "hair": [
             { "name": "なし", "src": null },
-            { "name": "巻き", "src": null },
+            { "name": "巻き", "src": "images/hair/image1.png" },
             // 他の髪型を追加
         ],
         "eyebrow": [
