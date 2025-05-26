@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- パーツデータの定義 ---
     const parts = {
         body: [ // ボディパーツは以前のサンプルのままです。必要に応じて画像を用意し、パスを修正してください。
-            { name: '標準体型', src: 'images/body/body_01.png' },
-            { name: 'がっしり体型', src: 'images/body/body_02.png' },
+            { name: '標準体型', src: null },
         ],
         hair: [ // 髪型パーツ (image1.png - image60.png)
             { name: 'なし', src: null },
@@ -141,13 +140,10 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: '音符棒型目', src: 'images/eyes/image67.png' }
         ],
         mouth: [ // 口パーツも以前のサンプルのままです。必要に応じて画像を用意し、パスを修正してください。
-            { name: '普通の口', src: 'images/mouth/mouth_normal.png' },
-            { name: 'にっこり口', src: 'images/mouth/mouth_smile.png' },
+            { name: '普通の口', src: null },
         ],
         antenna: [ // アンテナパーツも以前のサンプルのままです。必要に応じて画像を用意し、パスを修正してください。
-            { name: 'なし', src: null },
-            { name: '一本アンテナ', src: 'images/antenna/antenna_single.png' },
-            { name: '二股アンテナ', src: 'images/antenna/antenna_double.png' },
+            { name: 'なし', src: null }
         ]
     };
 
