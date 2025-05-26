@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const parts = {
         "body": [
             { "name": "なし", "src": null },
+            { "name": "褐色丸", "src": "images/body/image1.png" },
             // 他の輪郭 (形状、色違い) を追加
         ],
         "hair": [
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "eyebrow": [
             { "name": "なし", "src": null },
             { "name": "まろ眉 - 平行", "src": "images/eyebrow/image1.png" },
+            { "name": "ゲソ", "src": "images/eyebrow/image2.png" },
             // 他の眉毛を追加
         ],
         "eyes": [
@@ -30,11 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
         "nose": [
             { "name": "なし", "src": null },
             { "name": "c1", "src": "images/nose/image1.png" },
+            { "name": "三角", "src": "images/nose/image2.png" },
             // 他の鼻を追加
         ],
         "mouth": [
             { "name": "なし", "src": null },
-            { "name": "ぷっくり怒", "src": "images/nose/image1.png" },
+            { "name": "ぷっくり怒", "src": "images/mouth/image1.png" },
+            { "name": "唖然", "src": "images/mouth/image2.png" },
             // 他の口を追加
         ],
         "cheek": [
