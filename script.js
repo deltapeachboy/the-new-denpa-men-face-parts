@@ -19,17 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         "eyebrow": [
             { "name": "なし", "src": null },
-            { "name": "まろ眉 - 平行", "src": "images/eyebrow/image1" },
+            { "name": "まろ眉 - 平行", "src": "images/eyebrow/image1.png" },
             // 他の眉毛を追加
         ],
         "eyes": [
             { "name": "なし", "src": null },
-            { "name": "タケシ", "src": "images/eyes/image1" },
+            { "name": "タケシ", "src": "images/eyes/image1.png" },
             // 他の目を追加
         ],
         "nose": [
             { "name": "なし", "src": null },
-            { "name": "c1", "src": "images/nose/image1" },
+            { "name": "c1", "src": "images/nose/image1.png" },
             // 他の鼻を追加
         ],
         "mouth": [
