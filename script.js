@@ -10,48 +10,36 @@ document.addEventListener('DOMContentLoaded', () => {
     // ここでは、各パーツ画像が300x300で、適切な位置に描画される前提。
     const parts = {
         "body": [
-            { "name": "標準体型 - 肌色", "src": "images/body/body_shape1_skin1.png" },
-            { "name": "標準体型 - 青", "src": "images/body/body_shape1_blue.png" }
+            { "name": "なし", "src": null },
             // 他の輪郭 (形状、色違い) を追加
         ],
         "hair": [
             { "name": "なし", "src": null },
-            { "name": "ショート - 金", "src": "images/hair/hair_short_blonde.png" },
-            { "name": "ロング - 茶", "src": "images/hair/hair_long_brown.png" }
             // 他の髪型を追加
         ],
         "eyebrow": [
             { "name": "なし", "src": null },
-            { "name": "普通眉 - 黒", "src": "images/eyebrow/eyebrow_normal_black.png" },
-            { "name": "細眉 - 茶", "src": "images/eyebrow/eyebrow_thin_brown.png" }
+            { "name": "まろ眉 - 平行", "src": "images/eyebrow/image1.png" },
             // 他の眉毛を追加
         ],
         "eyes": [
-            { "name": "標準目 - 黒", "src": "images/eyes/eyes_normal_black.png" },
-            { "name": "ジト目 - 青", "src": "images/eyes/eyes_halfclosed_blue.png" }
+            { "name": "なし", "src": null },
             // 他の目を追加
         ],
         "nose": [
             { "name": "なし", "src": null },
-            { "name": "小さい鼻", "src": "images/nose/nose_small.png" },
-            { "name": "丸い鼻", "src": "images/nose/nose_round.png" }
             // 他の鼻を追加
         ],
         "mouth": [
-            { "name": "普通の口", "src": "images/mouth/mouth_normal.png" },
-            { "name": "笑顔", "src": "images/mouth/mouth_smile.png" }
+            { "name": "なし", "src": null },
             // 他の口を追加
         ],
         "cheek": [
             { "name": "なし", "src": null },
-            { "name": "赤みほっぺ", "src": "images/cheek/cheek_blush_pink.png" },
-            { "name": "そばかす", "src": "images/cheek/cheek_freckles.png" }
             // 他のほっぺを追加
         ],
         "antenna": [
             { "name": "なし", "src": null },
-            { "name": "一本アンテナ", "src": "images/antenna/antenna_single.png" },
-            { "name": "二本アンテナ", "src": "images/antenna/antenna_double.png" }
             // 他のアンテナを追加
         ]
     };
