@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         "nose": [
             { "name": "なし", "src": null },
+            { "name": "c1", "src": "images/nose/image1" },
             // 他の鼻を追加
         ],
         "mouth": [
