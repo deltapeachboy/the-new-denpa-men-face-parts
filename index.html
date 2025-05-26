@@ -21,31 +21,37 @@
                 <select id="hair-select"></select>
             </div>
             <div class="selector-group">
+                <label for="eyebrow-select">眉毛:</label>
+                <select id="eyebrow-select"></select>
+            </div>
+            <div class="selector-group">
                 <label for="eyes-select">目:</label>
                 <select id="eyes-select"></select>
             </div>
-            <!-- 鼻パーツを追加する場合
             <div class="selector-group">
                 <label for="nose-select">鼻:</label>
                 <select id="nose-select"></select>
             </div>
-            -->
             <div class="selector-group">
                 <label for="mouth-select">口:</label>
                 <select id="mouth-select"></select>
             </div>
             <div class="selector-group">
+                <label for="cheek-select">ほっぺ:</label>
+                <select id="cheek-select"></select>
+            </div>
+            <div class="selector-group">
                 <label for="antenna-select">アンテナ:</label>
                 <select id="antenna-select"></select>
             </div>
-            <!-- 他のパーツ（アクセサリーなど）も同様に追加できます -->
 
             <button id="random-button">ランダム生成！</button>
+            <button id="download-button">画像をダウンロード</button>
         </div>
 
         <div class="preview-area">
             <h2>プレビュー</h2>
-            <canvas id="faceCanvas" width="300" height="300"></canvas>
+            <canvas id="faceCanvas" width="300" height="300"></canvas> <!-- 少し大きくしました -->
             <p class="image-note">パーツ画像は背景透明PNGで、300x300pxのキャンバス上の正しい位置に配置されている想定です。</p>
         </div>
     </div>

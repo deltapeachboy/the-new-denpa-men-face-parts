@@ -20,7 +20,7 @@ h1, h2 {
     gap: 30px;
     margin-top: 20px;
     width: 100%;
-    max-width: 800px; /* コンテナの最大幅 */
+    max-width: 900px; /* コンテナの最大幅を少し広げました */
 }
 
 .controls {
@@ -28,11 +28,11 @@ h1, h2 {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    min-width: 280px;
-    flex: 1; /* フレックスアイテムとしての伸縮性を設定 */
+    min-width: 300px; /* コントロールエリアの最小幅 */
+    flex: 1;
 }
 
-.part-selector h2 {
+.controls h2 { /* h2のスタイルが重複していたのを修正 */
     margin-top: 0;
     font-size: 1.3em;
     border-bottom: 2px solid #ecf0f1;
@@ -61,23 +61,33 @@ h1, h2 {
     cursor: pointer;
 }
 
-#random-button {
+#random-button, #download-button {
     display: block;
     width: 100%;
     padding: 12px;
-    background-color: #3498db;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1em;
-    margin-top: 25px;
+    margin-top: 15px; /* ボタン間のマージン調整 */
     transition: background-color 0.3s ease;
 }
 
+#random-button {
+    background-color: #3498db; /* 青系 */
+}
 #random-button:hover {
     background-color: #2980b9;
 }
+
+#download-button {
+    background-color: #2ecc71; /* 緑系 */
+}
+#download-button:hover {
+    background-color: #27ae60;
+}
+
 
 .preview-area {
     background-color: #ffffff;
@@ -87,15 +97,15 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 350px; /* プレビューエリアの最小幅 */
-    flex: 1.5; /* コントロールより少し幅広に */
+    min-width: 350px;
+    flex: 1.5;
 }
 
 #faceCanvas {
     border: 2px dashed #bdc3c7;
-    background-color: #ecf0f1; /* キャンバスの仮背景色 */
-    width: 300px; /* CSSでの表示サイズ */
-    height: 300px; /* CSSでの表示サイズ */
+    background-color: #ecf0f1;
+    width: 300px; /* CSSでの表示サイズ (HTMLのcanvasタグのwidth/heightと一致させる) */
+    height: 300px;/* CSSでの表示サイズ */
 }
 .image-note {
     font-size: 0.8em;
