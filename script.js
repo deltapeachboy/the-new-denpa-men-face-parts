@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "body": [
             { "name": "なし", "src": null },
             { "name": "褐色丸", "src": "images/body/image1.png" },
-            { "name": "褐色縦楕円", "src": "images/body/image1.png" },
+            { "name": "褐色縦楕円", "src": "images/body/image2.png" },
             // 他の輪郭 (形状、色違い) を追加
         ],
         "hair": [
