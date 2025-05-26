@@ -39,12 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
             { "name": "c1", "src": "images/nose/image1.png" },
             { "name": "三角", "src": "images/nose/image2.png" },
             { "name": "たてばな", "src": "images/nose/image3.png" },
+            { "name": "小黒三角", "src": "images/nose/image4.png" },
             // 他の鼻を追加
         ],
         "mouth": [
             { "name": "なし", "src": null },
             { "name": "ぷっくり怒", "src": "images/mouth/image1.png" },
             { "name": "唖然", "src": "images/mouth/image2.png" },
+            { "name": "犬", "src": "images/mouth/image3.png" }
             // 他の口を追加
         ],
         "cheek": [
