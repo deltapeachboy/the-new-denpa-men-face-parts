@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         "mouth": [
             { "name": "なし", "src": null },
+            { "name": "ぷっくり怒", "src": "images/nose/image1.png" },
             // 他の口を追加
         ],
         "cheek": [
