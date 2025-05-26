@@ -12,10 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
         "body": [
             { "name": "なし", "src": null },
             { "name": "褐色丸", "src": "images/body/image1.png" },
+            { "name": "褐色縦楕円", "src": "images/body/image1.png" },
             // 他の輪郭 (形状、色違い) を追加
         ],
         "hair": [
             { "name": "なし", "src": null },
+            { "name": "巻き", "src": null },
             // 他の髪型を追加
         ],
         "eyebrow": [
@@ -47,10 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "cheek": [
             { "name": "なし", "src": null },
             // 他のほっぺを追加
-        ],
-        "antenna": [
-            { "name": "なし", "src": null },
-            // 他のアンテナを追加
         ]
     };
 
