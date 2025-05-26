@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { "name": "なし", "src": null },
             { "name": "まろ眉 - 平行", "src": "images/eyebrow/image1.png" },
             { "name": "ゲソ", "src": "images/eyebrow/image2.png" },
+            { "name": "まろ眉", "src": "images/eyebrow/image3.png" },
             // 他の眉毛を追加
         ],
         "eyes": [
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { "name": "目つき", "src": "images/eyes/image2.png" },
             { "name": "青鬼", "src": "images/eyes/image3.png" },
             { "name": "ひよこホイップ", "src": "images/eyes/image4.png" },
+            { "name": "悪ジト目", "src": "images/eyes/image5png" },
             // 他の目を追加
         ],
         "nose": [
@@ -42,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { "name": "三角", "src": "images/nose/image2.png" },
             { "name": "たてばな", "src": "images/nose/image3.png" },
             { "name": "小黒三角", "src": "images/nose/image4.png" },
+            { "name": "照れ", "src": "images/nose/image5.png" },
             // 他の鼻を追加
         ],
         "mouth": [
