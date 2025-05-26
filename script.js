@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { "name": "タケシ", "src": "images/eyes/image1.png" },
             { "name": "目つき", "src": "images/eyes/image2.png" },
             { "name": "青鬼", "src": "images/eyes/image3.png" },
+            { "name": "ひよこホイップ", "src": "images/eyes/image4.png" },
             // 他の目を追加
         ],
         "nose": [
