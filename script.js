@@ -27,12 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
         "eyes": [
             { "name": "なし", "src": null },
             { "name": "タケシ", "src": "images/eyes/image1.png" },
+            { "name": "目つき", "src": "images/eyes/image2.png" },
+            { "name": "青鬼", "src": "images/eyes/image3.png" },
             // 他の目を追加
         ],
         "nose": [
             { "name": "なし", "src": null },
             { "name": "c1", "src": "images/nose/image1.png" },
             { "name": "三角", "src": "images/nose/image2.png" },
+            { "name": "たてばな", "src": "images/nose/image3.png" },
             // 他の鼻を追加
         ],
         "mouth": [
@@ -57,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let imagesLoaded = 0;
 
     // 描画順序: 下に描画されるものから順に
-    const drawOrder = ["body", "hair", "eyebrow", "eyes", "nose", "mouth", "cheek", "antenna"];
+    const drawOrder = ["body", "eyebrow", "eyes", "mouth", "nose", "cheek", "hair"];
 
     function preloadImages(onComplete) {
         imagesToLoad = 0;
