@@ -19,11 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         "eyebrow": [
             { "name": "なし", "src": null },
-            { "name": "まろ眉 - 平行", "src": "images/eyebrow/image1.png" },
+            { "name": "まろ眉 - 平行", "src": "images/eyebrow/image1" },
             // 他の眉毛を追加
         ],
         "eyes": [
             { "name": "なし", "src": null },
+            { "name": "タケシ", "src": "images/eyes/image1" },
             // 他の目を追加
         ],
         "nose": [
